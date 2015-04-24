@@ -52,7 +52,7 @@
       <h4>Navigation</h4>
       <ul>
         <li><a href="#">Curatorial</a></li>
-        <li><a href="#">Departments</a></li>
+        <li><a href="#departments">Departments</a></li>
         <li><a href="http://new.artsmia.org" target="blank">new.ARTSMIA.org</a></li>
       </ul>
     </nav>
@@ -66,13 +66,13 @@
       </div>
       <a id="scrollStop"></a>
       <div class="special_features">
-        <div class="feature_box color g-medium--2 g-wide--1">
+        <div class="feature_box color g-medium--half g-wide--1">
         </div>
-        <div class="feature_box artist g-medium--2 g-wide--1">
+        <div class="feature_box artist g-medium--half g-medium--last g-wide--1">
         </div>
-        <div class="feature_box highlights g-medium--2 g-wide--1">
+        <div class="feature_box highlights g-medium--half g-wide--1">
         </div>
-        <div class="feature_box new g-medium--2 g-wide--1 g--last">
+        <div class="feature_box new g-medium--half g-medium--last g-wide--1 g-wide--last">
         </div>
       </div>
       <div class="dynamic_content">
@@ -218,6 +218,26 @@
           </div>
         </div>
       </div>
+      <div class="evergreen_content">
+        <a id="departments"></a>
+        <h2>Departments</h2>
+        <div class="departments">
+          <div class="g-medium--1 g-wide--2">
+              <div class="department_list_item africa" onClick="#"><h3>Arts of Africa and the Americas</h3></div>
+              <div class="department_list_item asia" onClick="#"><h3>Arts of Asia</h3></div>
+              <div class="department_list_item contemporary" onClick="#"><h3>Contemporary Art</h3></div>
+              <div class="department_list_item decorative" onClick="#"><h3>Decorative Arts, Textiles and Sculpture</h3></div>
+          </div>
+          <div class="g-medium--1 g-wide--2 g--last">
+            <div class="department_list_item paintings" onClick="#"><h3>Paintings</h3></div>
+            <div class="department_list_item photography" onClick="#"><h3>Photography and New Media</h3></div>
+            <div class="department_list_item prints" onClick="#"><h3>Prints and Drawings</h3></div>
+            <div class="department_list_item curatorial" onClick="#"><h3>The Curators</h3></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <h2>Of Interest</h2>
+      </div>
     </main>
     <a href="#toTop" class="scrollToTop"><i class="icon icon-chevron-up"></i></a>
 
@@ -226,12 +246,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-      $(".search_results, a.scrollToTop, .search_color, .search_artist, .search_highlights, .search_new, .action_bar").hide();
+      $(".search_results, a.scrollToTop, .search_color, .search_artist, .search_highlights, .search_new, .action_bar, .dynamic_content").hide();
       $(".horizontal_list_item").hover(function(){
         $(this).children(".action_bar").slideToggle(500);
       });
       $("#search").on('input', function () {
       if ($("#search").val().length > 3) {
+        $(".dynamic_content").slideDown(500);
         $(".header").removeClass("landing");
         $(".search_results").fadeIn(1500);
         $(".special_features, .search_color, .search_artist, .search_highlights, .search_new").fadeOut(200);
@@ -242,21 +263,25 @@
     };
     });
     $(".color").click(function(){
+      $(".dynamic_content").slideDown(500);
       $(".search_color").delay(200).fadeIn(1500);
       $(".search_results, .search_artist, .search_highlights, .search_new").fadeOut(200);
       $("html,body").animate( { scrollTop:$("#scrollStop").offset().top } , 1000, 'linear' );
     });
     $(".artist").click(function(){
+      $(".dynamic_content").slideDown(500);
       $(".search_artist").delay(200).fadeIn(1500);
       $(".search_results, .search_color, .search_highlights, .search_new").fadeOut(200);
       $("html,body").animate( { scrollTop:$("#scrollStop").offset().top } , 1000, 'linear' );
     });
     $(".highlights").click(function(){
+      $(".dynamic_content").slideDown(500);
       $(".search_highlights").delay(200).fadeIn(1500);
       $(".search_results, .search_artist, .search_color, .search_new").fadeOut(200);
       $("html,body").animate( { scrollTop:$("#scrollStop").offset().top } , 1000, 'linear' );
     });
     $(".new").click(function(){
+      $(".dynamic_content").slideDown(500);
       $(".search_new").delay(200).fadeIn(1500);
       $(".search_results, .search_artist, .search_color, .search_highlights").fadeOut(200);
       $("html,body").animate( { scrollTop:$("#scrollStop").offset().top } , 1000, 'linear' );

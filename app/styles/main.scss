@@ -263,6 +263,7 @@ main {
 .feature_box {
   text-align:center;
   height:10em;
+  margin-top: 10px;
 }
 .feature_box:hover{
   cursor:pointer;
@@ -348,6 +349,67 @@ a.scrollToTop, a:visited.scrollToTop, a:hover.scrollToTop {
 }
 .action_bar ul li a{
   color:#ffffff;
+}
+.evergreen_content{
+  display:inline-block;
+  height:10em;
+  width:100%;
+  padding:20px;
+}
+@keyframes animatedBackground {
+	from { background-position: top center; }
+	to { background-position:  center center; }
+}
+.department_list_item {
+  height:13em;
+  background:#000000;
+  margin:5px;
+  padding-left:20px;
+  cursor:pointer;
+  animation: animatedBackground 1s linear;
+}
+.department_list_item h3{
+  font-weight:700;
+  text-decoration:none;
+  color:#ffffff;
+  line-height:1em;
+  text-align:left;
+  padding-top:6em;
+}
+.department_list_item.africa{
+  background:url("https://api.artsmia.org/images/4866/600/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.asia{
+  background:url("https://api.artsmia.org/images/12134/600/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.contemporary{
+  background:url("https://api.artsmia.org/images/1721/600/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.decorative{
+  background:url("https://api.artsmia.org/images/8024/800/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.paintings{
+  background:url("https://api.artsmia.org/images/1348/800/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.photography{
+  background:url("https://api.artsmia.org/images/89324/800/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.prints{
+  background:url("https://api.artsmia.org/images/9194/800/medium.jpg") no-repeat center center;
+  background-size: cover;
+}
+.department_list_item.curatorial{
+  background:url("http://new.artsmia.org/wp-content/themes/new_artsmia/images/about/kaywin.jpg") no-repeat center center;
+  background-size: cover;
+}
+.news_information{
+  padding:20px;
 }
 @font-face {
   font-family: 'Roboto Condensed';
